@@ -1,0 +1,11 @@
+Các thư viện cần cài nếu dùng scss
+1. npm i sass
+2. npm i classnames
+
+Lưu ý :
+- Cách đặt tên file scss là " tên file.module.scss "
+    vd : header.module.scss
+-   Cách import và file jsx
+    import classNames from 'classnames/bind'
+    import styles from './header.module.scss'   
+    const cx = classNames.bind(styles)
