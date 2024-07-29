@@ -63,3 +63,44 @@ button {
   max-width: 1140px;
   margin: 0 auto;
 }
+
+
+// Slick Slider
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
+}
+
+.slick-next:before,
+.slick-prev::before {
+  content: '' !important;
+} 
+
+.slick-slide > div {
+  margin-left: 50px;
+}
+.slick-slide > div:first-child {
+  margin-left: 0px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -80px  !important;
+  left: -60px;
+  width: 200px;
+  height: 15px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px !important;
+  line-height: 0 !important;
+  color: var(--text-color) !important;
+}
+
+.slick-dots li.slick-active button:before {
+  transform: scaleX(1.1) !important;
+  color: var(--primary-color) !important ;
+}

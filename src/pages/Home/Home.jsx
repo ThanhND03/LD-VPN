@@ -4,6 +4,7 @@ import { assets } from '../../assets/assets'
 import classNames from 'classnames/bind'
 import styles from './Home.module.scss'
 import Box from '../../components/Box/Box'
+import Slider from '../../components/Slider/Slider'
 const cx = classNames.bind(styles)
 
 
@@ -120,11 +121,46 @@ const Home = () => {
                             price='$12 / mo'
                         />
                     </div>
+
+                    <div className={cx("title")} >
+                        <h1>Huge Global Network <br /> of Fast VPN</h1>
+                        <p>See <span className='fw500-logo' >LaslesVPN</span> everywhere to make it easier for you when you move <br /> locations.</p>
+                    </div>
+                    
+                    <div className={cx("vpn-global-img")}>
+                        <img src={assets.global} alt="" />
+                    </div>
+
                 </div>
             </section>
             
             <section id={cx('layout-three')}>
+                <div className={cx('container')}>
+                    <div className={cx("list-programs")}>
+                        <img src={assets.netflix} alt="" />
+                        <img src={assets.reddit} alt="" />
+                        <img src={assets.amazon} alt="" />
+                        <img src={assets.discord} alt="" />
+                        <img src={assets.spotify} alt="" />
+                    </div>
 
+                    <div className={cx("title")} >
+                        <h1>Trusted by Thousands of <br /> Happy Customer</h1>
+                        <p>These are the stories of our customers who have joined us with great <br /> pleasure when using this crazy feature.</p>
+                    </div>
+                    
+                    <Slider />
+
+                    <div className={cx("box-sub")}>
+                        <div className={cx("left")}>
+                            <h1>Subscribe Now for <br /> Get Special Features!</h1>
+                            <p>Let's subscribe with us and find the fun.</p>
+                        </div>
+                        <div className={cx("right")}>
+                            <button>Subscribe Now</button>
+                        </div>
+                    </div>
+                </div>
             </section>
 
         </div>
