@@ -1,16 +1,27 @@
-import config from '../config/index'
-
+import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import Account from "../pages/Account/Account";
 
+const router = createBrowserRouter([
+    {
+        path: "",
+        children: [
+            {
+                path:"",
+                element: <Home />
+            }
+        ]
+    },
+    {
+        path: "account",
+        children: [
+            {
+                path: "",
+                element: <Account />
+            }
+        ]
+    }
+]);
 
-const publicRouter = [
-    { path: config.home, component: Home},
-    { path: config.account, component: Account},
-]
 
-const priveRouter = [
-
-]
-
-export {publicRouter, priveRouter}
+export default router;
